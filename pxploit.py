@@ -84,4 +84,4 @@ PARSECT PXploit\n""")
             print("[!] Your input is invalid!")
             sys.exit(1)
         else:
-            print("[-] Something wrong!\n\t{}\n\nReport issue: https://github.com/DwiWardana/pxploit/issues\nEmail me: mrxy@parsect.com".format(e))
+            print("[-] Something wrong!\n\t{}\n\nReport issue: https://github.com/DwiWardana/PXploit/issues\nEmail me: mrxy@parsect.com".format(e))

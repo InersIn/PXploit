@@ -12,10 +12,10 @@ $ cd PXploit
 $ pip3 install -r requirement.txt
 ```
 ```
-$ chmod +x ./pxploit
+$ chmod +x ./pxploit.py
 ```
 ```
-$ python3 pxploit
+$ python3 pxploit.py
 ```
 
 ### Contac Me:

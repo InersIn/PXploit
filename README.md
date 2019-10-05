@@ -2,21 +2,15 @@
 Port scanner banner graber
 
 ### installing:
-```
-$ git clone https://github.com/DwiWardana/PXploit.git
-```
-```
-$ cd PXploit
-```
-```
-$ pip3 install -r requirement.txt
-```
-```
-$ chmod +x ./pxploit.py
-```
-```
-$ python3 pxploit.py
-```
+$ `git clone https://github.com/DwiWardana/PXploit.git`
+
+$ `cd PXploit`
+
+$ `pip3 install -r requirement.txt`
+
+$ `chmod +x ./pxploit.py`
+
+$ `python3 pxploit.py`
 
 ### Contac Me:
 email: `mrxy@parsect.com`

@@ -20,6 +20,7 @@ $ python3 pxploit
 
 ### Contac Me:
 email: `mrxy@parsect.com`
+twitter: `https:twitter.com/MrXY404`
 
 ### Donate:
 XMR: `4A5yxoaWHXwA5G2eDnbeNrjdpmJwZxBVkGGsgsge8N2FUVPkdqbCtu2RxdXb15dM6jUDjWk1vWm1JNZ9FNVH7XGREVJXjYd`

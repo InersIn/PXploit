@@ -24,6 +24,8 @@ def scanner(i,p):
                 e = str(e)
                 if "utf-8" in e:
                     service = s.recv(1024)
+                else:
+                    service = "Can't find service"
             print("\r┏━Port {} Open".format(x))
             print("┗━🢖 {}".format(service))
         except socket.error as e:

@@ -15,6 +15,7 @@ def scanner(i,p):
     for x in p:
         try:
             s = socket.socket()
+            s.settimeout(0.7)
             s.connect((i, int(x)))
             s.settimeout(3)
             service = ""

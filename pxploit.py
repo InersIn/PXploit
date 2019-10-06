@@ -11,48 +11,30 @@ except Exception as e:
     print("No module named {a}\nTry run this syntax: pip install {a}".format(a=e))
     sys.exit(1)
 
-def banner():
-    print(
-"""
-Usage:
-        -h => This message
-        -u => Update database""")
-
-def update():
-    try:
-        df = pandas.read_csv("https://raw.githubusercontent.com/offensive-security/exploitdb/master/files_exploits.csv")
-        df.to_csv(".database/database.csv")
-    except Exception as e:
-        print(e)
-
-
 def scanner(i,p):
     for x in p:
         try:
             s = socket.socket()
             s.connect((i, int(x)))
-            if x != 3306:
+            s.settimeout(3)
+            service = ""
+            try:
                 service = s.recv(1024).decode()
-            else:
-                service = s.recv(1024)
+            except Exception as e:
+                e = str(e)
+                if "utf-8" in e:
+                    service = s.recv(1024)
             print("\r┏━Port {} Open".format(x))
             print("┗━🢖 {}".format(service))
-            s.settimeout(5)
         except socket.error as e:
-            print("\rport {}".format(x), end='')
+            print("\rport {}".format(x), end='\r')
             continue
+    s.close()
+    print("\nDONE!")
+    sys.exit()
 
 
 if __name__ == '__main__':
-    helper = ['-u', '-h']
-    try:
-        if sys.argv[1] == "-u":
-            update()
-        else:
-            banner()
-        sys.exit(0)
-    except Exception:
-        pass
     try:
         print(
 """    ** **
@@ -84,4 +66,4 @@ PARSECT PXploit\n""")
             print("[!] Your input is invalid!")
             sys.exit(1)
         else:
-            print("[-] Something wrong!\n\t{}\n\nReport issue: https://github.com/DwiWardana/PXploit/issues\nEmail me: mrxy@parsect.com".format(e))
+            print("[-] Something wrong!\n\t{}\n\nReport issue: https://github.com/DwiWardana/pxploit/issues\nEmail me: mrxy@parsect.com".format(e))

@@ -73,7 +73,7 @@ PARSECT PXploit\n""")
         sys.exit(0)
     except Exception as e:
         e = str(e)
-        if "invalid literal" in e:
+        if "invalid literal" in e or "Name or service not known":
             print("[!] Your input is invalid!")
             sys.exit(1)
         else:
